@@ -244,12 +244,16 @@ header {
     padding-bottom: 30px;
 }
 
+.about_name .fa-instagram {
+    color: #c49d61;
+}
+
 .about_text_container .about_mind {
     font-size: 1.2vw;
 }
 
 .about_text_container table {
-    border-top: solid black 1px;
+    border-top: solid #c49d61 1px;
     padding-top: 22px;
     margin-top: 22px;
     font-size: 1.2vw;
