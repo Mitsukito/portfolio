@@ -179,10 +179,13 @@ header {
     background-image: url(../img/FV_background.png);
     background-size: cover;
     width: 100%;
+    margin-top: 50px;
+}
+
+.fv_wrap_fadeitems {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 50px;
 }
 
 .fv_wrap p {
@@ -201,7 +204,7 @@ header {
 
 /* アバウト */
 .about_wrap {
-    max-width: 1435px;
+    max-width: 1000px;
     margin: 100px auto 0px;
     text-align: center;
     padding: 0px 10px;
@@ -231,7 +234,7 @@ header {
 .about_contents .about_text_container {
     position: absolute;
     top: 50%;
-    left: 130px;
+    left: 120px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -239,7 +242,7 @@ header {
 }
 
 .about_name {
-    font-size: 2.9vw;
+    font-size: 36px;
     font-weight: bold;
     padding-bottom: 30px;
 }
@@ -249,14 +252,14 @@ header {
 }
 
 .about_text_container .about_mind {
-    font-size: 1.2vw;
+    font-size: 13px;
 }
 
 .about_text_container table {
     border-top: solid #c49d61 1px;
     padding-top: 22px;
     margin-top: 22px;
-    font-size: 1.2vw;
+    font-size: 13px;
 
     border-collapse: separate;
     border-spacing: 10px;
@@ -297,50 +300,25 @@ header {
     width: 30%;
     margin-right: 5%;
     margin-bottom: 20px;
+    transition: 0.5s;
 }
 
 .works_wrap .works_gallary li:nth-child(3n) {
     margin-right: 0;
 }
 
+.works_wrap .works_gallary li:hover {
+    opacity: 0.5;
+}
+
 .works_wrap .btn_works {
-    /*テキストの基点とするためrelativeを指定*/
-    position: relative;
-    /*ボタンの形状*/
     border: 1px solid black;
     border-radius: 9999px;
-    padding: 17px 80px;
-    margin: 35px;
     font-size: 18px;
-    /* text-align: center; */
-    display: inline-block;
     transition: all 0.5s;
     cursor: pointer;
-}
-
-.btn_works span {
-    /*絶対配置でテキストの位置を決める*/
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /*アニメーションの指定*/
-    transition: all 0.5s;
-    /*ブロック要素にしてテキスト折り返しなし*/
-    display: block;
-    white-space: nowrap;
-}
-
-.btn_works span:nth-child(2) {
-    opacity: 0;
-}
-
-.btn_works_close span:nth-child(1) {
-    opacity: 0;
-}
-
-.btn_works_close span:nth-child(2) {
-    opacity: 1;
+    display: inline-block;
+    padding: 6px 40px 9px;
 }
 
 .works_wrap .btn_works:hover {
@@ -514,6 +492,7 @@ header {
     margin-bottom: 35px;
     padding: 20px 20px;
     box-sizing: border-box;
+    resize: vertical;
 }
 
 .contact_form .submit {
@@ -619,6 +598,11 @@ footer p {
     right: 10px;
     bottom: 10px;
     width: 100px;
+    transition: 0.5s;
+}
+
+.btn_top:hover {
+    opacity: 0.5;
 }
 
 /* 中間レスポンシブ */
@@ -653,11 +637,14 @@ footer p {
         background-image: url(../img/FV_background_tablet.png);
         background-repeat: no-repeat;
         background-position: center center;
+        height: calc(100vh - 43px);
+        margin-top: 0;
+    }
+
+    .fv_wrap_fadeitems {
         display: flex;
         flex-flow: column;
         justify-content: center;
-        height: calc(100vh - 43px);
-        margin-top: 0;
     }
 
     .fv_wrap p {
@@ -691,10 +678,15 @@ footer p {
         left: 110px;
     }
 
+    .about_text_container .about_mind {
+        font-size: 1.2vw;
+    }
+
     .about_text_container table {
         padding-top: 10px;
         margin-top: 10px;
         border-spacing: 0;
+        font-size: 1.2vw;
     }
 
     .about_text_container table th {
@@ -711,7 +703,7 @@ footer p {
 }
 
 /* スマホバージョン */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 780px) {
     /* 全体 */
     .pc_hidden {
         display: block;
@@ -833,14 +825,17 @@ footer p {
         background-image: url(../img/FV_back_sp.png);
         background-repeat: no-repeat;
         background-position: center center;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
         height: calc(100vh - 43px);
         margin-top: 0;
     }
 
-    .fv_wrap p {
+    .fv_wrap_fadeitems {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .fv_wrap .fv_wrap_fadeitems p {
         writing-mode: horizontal-tb;
         font-size: 10vw;
         padding-top: 0;
@@ -925,6 +920,10 @@ footer p {
     }
 
     /* ジッセキ */
+    .works_wrap h2 {
+        margin-bottom: 35px;
+    }
+
     .works_wrap .works_gallary {
         display: block;
     }
@@ -941,8 +940,6 @@ footer p {
 
     .works_wrap .btn_works {
         margin-top: 15px;
-        padding: 17px 70px;
-        border: 1px solid black;
     }
 
     .btn_works span {
@@ -993,6 +990,10 @@ footer p {
     }
 
     /* サービス */
+    .services_wrap h2 {
+        margin-bottom: 35px;
+    }
+
     .services_wrap .services_container {
         display: block;
     }
@@ -1062,6 +1063,10 @@ footer p {
     .header_wrap .header_left a,
     .header_wrap .nav_pc ul li:last-child {
         padding: 9px 40px;
+    }
+
+    .about_wrap {
+        max-width: 1435px;
     }
 
     .about_contents .about_text_container .about_mind,
