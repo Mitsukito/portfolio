@@ -501,6 +501,14 @@
                 $(".modal_btn5").modaal({
                     content_source: "#modal_work5",
                 });
+
+                $(window).on("scroll", function () {
+                    if ($(this).scrollTop() > 100) {
+                        $(".btn_top").fadeIn(300);
+                    } else {
+                        $(".btn_top").fadeOut(300);
+                    }
+                });
             });
 
             // 動きのきっかけとなるアニメーションの名前を定義
