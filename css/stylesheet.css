@@ -52,6 +52,10 @@ img {
     border: none;
 }
 
+h2 img {
+    height: 90px;
+}
+
 .fadeIn {
     animation-name: fadeInAnime;
     animation-duration: 2s;
@@ -549,6 +553,52 @@ textarea:-ms-input-placeholder {
     font-family: "Zen Maru Gothic", sans-serif;
 }
 
+.thanks_wrap {
+    height: calc(100vh - 250px);
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.thanks_wrap h2 {
+    margin-bottom: 35px;
+}
+
+.thanks_textcontainer {
+    background-color: white;
+    border-radius: 50px;
+    padding: 50px 20px;
+    width: 60%;
+    margin: 0 auto 50px;
+}
+
+.thanks_text1 {
+    color: #c49d61;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.thanks_text2 {
+    font-size: 18px;
+}
+
+.btn_back {
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    width: 100px;
+    margin: 0 auto;
+    padding: 8px 40px;
+    border-radius: 9999px;
+    color: white;
+    background-color: #c49d61;
+    transition: 0.5s;
+    border: #c49d61 solid 3px;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 0.05em;
+}
+
 footer {
     background-color: #c49d61;
     text-align: center;
@@ -711,7 +761,6 @@ footer p {
     }
 
     h2 {
-        width: 93px;
         margin: 0 auto 35px;
     }
 
@@ -1033,6 +1082,14 @@ footer p {
         font-size: 13px;
     }
 
+    .thanks_text1 {
+        font-size: 23px;
+    }
+
+    .thanks_text2 {
+        font-size: 13px;
+    }
+
     /* フッター */
     .footer_wrap {
         display: block;
@@ -1086,5 +1143,9 @@ footer p {
 
     .modaal-container .modal_detail table th {
         font-size: 17px;
+    }
+
+    .thanks_textcontainer {
+        width: 700px;
     }
 }
