@@ -24,7 +24,9 @@
         <header>
             <div class="header_wrap" id="top">
                 <div class="header_left">
-                    <h1><img src="img/title.png" alt="ミツコデザイン" /></h1>
+                    <h1>
+                        <img src="img/title.png" alt="ミツコデザイン" />
+                    </h1>
                     <a href="https://mitsukito.github.io/portfolio_es/"
                         >Español</a
                     >
@@ -55,39 +57,58 @@
                 </nav>
             </div>
         </header>
-
-        <div class="thanks_wrap" id="thanks">
-            <h2><img src="img/contact.png" alt="contact" /></h2>
-            <div class="thanks_textcontainer">
-            <p class="thanks_text1">お問い合わせ<br
-                class="pc_hidden"
-            />ありがとうございました。</p>
-            <p class="thanks_text2">
-                確認次第ご連絡させていただきます。<br />今しばらくお待ちください。
-            </p>
-        </div>
-            <a class="btn_back" href="index.html">back</a>
-
-        </div>
-        <footer>
-            <div class="footer_wrap">
-                <h4>
-                    <a href="#top"
-                        ><img src="img/title_footer.png" alt="ミツコデザイン"
-                    /></a>
-                </h4>
-                <div class="footer_nav">
-                    <ul>
-                        <li><a href="index.html#about">about</a></li>
-                        <li><a href="index.html#works">works</a></li>
-                        <li><a href="index.html#services">services</a></li>
-                        <li><a href="index.html#contact">contact</a></li>
-                    </ul>
+        <div class="thanks_fade_items">
+            <div class="thanks_wrap" id="thanks">
+                <h2><img src="img/contact.png" alt="contact" /></h2>
+                <div class="thanks_textcontainer">
+                    <p class="thanks_text1">
+                        お問い合わせ<br
+                            class="pc_hidden"
+                        />ありがとうございました。
+                    </p>
+                    <p class="thanks_text2">
+                        確認次第ご連絡させていただきます。<br />今しばらくお待ちください。
+                    </p>
                 </div>
+                <a class="btn_back" href="index.html">back</a>
             </div>
-            <p>&copy;2022 Mitsuko Design All rights reserved.</p>
-        </footer>
+            <footer>
+                <div class="footer_wrap">
+                    <h4>
+                        <a href="#top"
+                            ><img
+                                src="img/title_footer.png"
+                                alt="ミツコデザイン"
+                        /></a>
+                    </h4>
+                    <div class="footer_nav">
+                        <ul>
+                            <li><a href="index.html#about">about</a></li>
+                            <li><a href="index.html#works">works</a></li>
+                            <li><a href="index.html#services">services</a></li>
+                            <li><a href="index.html#contact">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p>&copy;2022 Mitsuko Design All rights reserved.</p>
+            </footer>
+        </div>
 
-        /></a>
+        <script>
+            $(function () {
+                $(".sp_navbtn, .nav_sp ul li").click(function () {
+                    if ($(".nav_sp").css("display") == "block") {
+                        $(".nav_sp").fadeToggle(400, function () {
+                            $(".thanks_fade_items").fadeToggle();
+                        });
+                    } else {
+                        $(".thanks_fade_items").fadeToggle(400, function () {
+                            $(".nav_sp").fadeToggle();
+                        });
+                    }
+                    $(".sp_navbtn").toggleClass("open");
+                });
+            });
+        </script>
     </body>
 </html>
