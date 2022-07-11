@@ -695,7 +695,8 @@ footer p {
     .fv_wrap_fadeitems {
         display: flex;
         flex-flow: column;
-        justify-content: center;
+        justify-content: space-between;
+        height: calc(100vh - 50px);
     }
 
     .fv_wrap p {
