@@ -425,6 +425,18 @@ h2 img {
     display: none;
 }
 
+#modal_work6 {
+    display: none;
+}
+
+#modal_work7 {
+    display: none;
+}
+
+#modal_work8 {
+    display: none;
+}
+
 .modaal-close:after,
 .modaal-close:before {
     background: #c49d61 !important;
